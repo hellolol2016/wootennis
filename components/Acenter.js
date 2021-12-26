@@ -1,4 +1,5 @@
-import { Box } from "@chakra-ui/react";
+
+import { Center } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 export default function Article({ children, ...rest }) {
   return <motion.div
@@ -9,7 +10,7 @@ export default function Article({ children, ...rest }) {
   
   >
     
-    <Box padding={10} fontSize={{ base:'14px',xl: '20px'}}>{children}</Box>
+    <Center >{children}</Center>
     
     </motion.div>
 }
