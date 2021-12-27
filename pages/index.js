@@ -15,11 +15,11 @@ export default function Home() {
     <>
       <Head></Head>
 
-      <ACenter>
+      <ACenter w={{base:'90%', xl:"70%"}}>
         <VStack width="100%">
           <Title>title </Title>
 
-          <HStack maxW="70%">
+          <HStack w={{base: "90%" , xl:"70%"}}>
             <Image src={pfp} height={2000} width={2000} />
             <Article>
               THis is the person that the website is for , he's a pretty chill
@@ -38,7 +38,7 @@ export default function Home() {
           </HStack>
 
           <Box height={"200px"}></Box>
-          <HStack maxW="70%">
+          <HStack w={{base: "90%" , xl:"70%"}}>
             <Article>
               THis is the person that the website is for , he's a pretty chill
               guy THis is the person that the website is for , he's a pretty
@@ -57,7 +57,26 @@ export default function Home() {
             <Image src={pfp} height={2000} width={2000} />
           </HStack>
 
-<SlideShow />
+<SlideShow w={{base:'90%', xl:'70%'}} />
+
+          <VStack maxW="70%" bg={"rgba(0,0,0,0.5)"} >
+<Title mt={10}>Mission</Title>
+            <Article>
+              THis is the person that the website is for , he's a pretty chill
+              guy THis is the person that the website is for , he's a pretty
+              chill guyTHis is the person that the website is for , he's a
+              pretty chill guyTHis is the person that the website is for , he's
+              a pretty chill guyTHis is the person that the website is for ,
+              he's a pretty chill guyTHis is the person that the website is for
+              , he's a pretty chill guyTHis is the person that the website is
+              for , he's a pretty chill guyTHis is the person that the website
+              is for , he's a pretty chill guyTHis is the person that the
+              website is for , he's a pretty chill guyTHis is the person that
+              the website is for , he's a pretty chill guyTHis is the person
+              that the website is for , he's a pretty chill guy
+            </Article>
+
+          </VStack>
       </VStack>
       </ACenter>
     </>
