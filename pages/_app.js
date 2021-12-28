@@ -5,17 +5,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { AnimatePresence, motion } from "framer-motion";
 
 //TODO MOVE THEME TO DIFFERENT FILE THEMEJS
-const theme = extendTheme({
-  styles: {
-    global: {
-      body: {
-        bg: "#edf2f4",
-        color: "#2b2d42",
-      },
-    },
-  },
-});
-
+import theme from "../lib/theme";
 
 function MyApp({ Component, pageProps, router }) {
   return (
