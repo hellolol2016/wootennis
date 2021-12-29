@@ -17,6 +17,9 @@ const NavLink = ({ text, href , path}) => {
 
 export default function Navbar({router}) {
   return (
+    <Box  backgroundImage={"/center.jpg"} backgroundSize={"cover"} backgroundPosition={"50% 20%"}>
+
+
     <motion.div
     
     animate={{ opacity: 1, y: 0, transition: { duration: 0.6 } }}
@@ -24,7 +27,7 @@ export default function Navbar({router}) {
     exit={{opacity:0}}
     
     >
-      <HStack fontSize={"30px"}  justify={"flex-end"}   className="nav-soc" padding={"40px"}>
+      <HStack fontSize={"30px"}  justify={"flex-end"}   className="nav-soc" padding={"40px"} >
      
       
       <Link href="https://www.yelp.com/biz/woo-tennis-lessons-irvine" >
@@ -54,6 +57,8 @@ export default function Navbar({router}) {
       </HStack>
       
 
-</motion.div>
+      </motion.div>
+
+    </Box>
   );
 }
