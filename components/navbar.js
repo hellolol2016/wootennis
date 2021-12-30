@@ -17,8 +17,8 @@ const NavLink = ({ text, href , path}) => {
 
 export default function Navbar({router}) {
   return (
-    <Box  backgroundImage={"/center.jpg"} backgroundSize={"cover"} backgroundPosition={"50% 20%"}>
-
+    //<Box  backgroundImage={"/center.jpg"} backgroundSize={"cover"} backgroundPosition={"50% 20%"}>
+<Box background>
 
     <motion.div
     
@@ -51,7 +51,7 @@ export default function Navbar({router}) {
       path={router.route}
       />
       <NavLink text="Work" href="/work"          path={router.route}/>
-      <NavLink text="VSP" href="/vsp"       path={router.route}/>
+      <NavLink text="Location" href="/location"       path={router.route}/>
       <NavLink text="Team" href="/team"       path={router.route}/>
       <NavLink text="Contact" href="/contact"       path={router.route}/>
       </HStack>

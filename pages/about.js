@@ -50,7 +50,7 @@ export default function Page({}) {
         </HStack>
 
           <Box background={"gray.300"} padding={"20px"} >
-            <Title>History</Title>
+            <Title>Track Record</Title>
             <VStack  width={"60%"} alignItems={"left"}>
               <Timeslot year={"1900"}>Born in </Timeslot>
               <Timeslot year={"2000"}>Goes to UCLA</Timeslot>
