@@ -13,7 +13,7 @@ export default function Layout({ children, router }) {
     exit={{opacity:0}}
       >
 
-      <Navbar router={router} />
+        <Navbar router={router} />
         {children}
       </motion.div>
       <Footer />

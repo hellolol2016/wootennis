@@ -12,7 +12,7 @@ export default function Location({ }) {
       <VStack width={{ base: "100%", xl: "100%" }}>
         <Box width={"100%"} height={"30%"}>
           <Text  color={"white"} fontWeight={"1000"} fontSize={"15vw"} position={"absolute"} zIndex={1} lineHeight={"0.8"}>COME <br></br>LEARN THE PLAYBOOK </Text>
-          <Image src={"/video/fly.gif"} width={"90vw"} height={"60%"} layout="responsive" />
+          <Image src={"/video/VSPLocation2.gif"} width={"90vw"} height={"60%"} layout="responsive" />
         </Box>
       </VStack>
     </ACenter>

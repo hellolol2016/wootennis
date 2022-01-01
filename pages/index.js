@@ -4,17 +4,33 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Article from "../components/article";
 import Title from "../components/title";
-import { Box, Center, HStack, Spacer, VStack } from "@chakra-ui/react";
+import { Box, Center, HStack, Spacer, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 import pfp from "../public/woo.png";
 import Img from "../components/image";
 import courts from "../public/center.jpg";
 import ACenter from "../components/Acenter";
 import Link from "next/link";
+import Navbar from "../components/navbar";
+import Video from "../components/video";
 export default function Home() {
   return (
     <>
       <Head></Head>
+
+      <Video />
+      <Box position={"absolute"} top={10} left={10}>
+        <Image src={"/blogo.png"} width={"100px"} height={"100px"}></Image>
+      </Box>
+      <Box  height={"110%"} display={"block"}>
+        <Box
+          position={"relative"}
+          right={"30px"}
+          width={"10%"}
+          height={"10%"}
+          top={0}
+        ></Box>
+      </Box>
 
       <ACenter w={{ base: "90%", xl: "70%" }}>
         <VStack width="100%">
@@ -48,7 +64,7 @@ export default function Home() {
                 needs to be systems and processes in place in order to be
                 successful, and tennis is no different. If you are interested in
                 learning more about my methodology and philosophies, please do
-                not hesitate to <Link href="/contact">  contact me here</Link>!
+                not hesitate to <Link href="/contact"> contact me here</Link>!
               </Article>
             </Box>
 
