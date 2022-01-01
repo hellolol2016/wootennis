@@ -12,7 +12,8 @@ export default ({...rest }) => {
 
   return (
    <Center  zIndex={-1} overflow={"hidden"}>
-    <video
+          <video
+              maxWidth  ={"none"}
             ref={videoRef}
             height="100%"
             loop
