@@ -1,5 +1,17 @@
 import { Box, Center } from '@chakra-ui/react';
 import React, { useEffect, useRef } from 'react';
+import styled from '@emotion/styled';
+
+const Vid = styled.video`
+width:auto;
+height:100%;
+@media(min-width:1900px){
+    height:100%;
+    width:100%;
+}
+` 
+
+
 
 export default ({...rest }) => {
     const videoRef = useRef();
@@ -11,16 +23,18 @@ export default ({...rest }) => {
     }, []);
 
   return (
-   <Center  zIndex={-1} overflow={"hidden"}>
-          <video
+      <Center zIndex={-1} overflow={"hidden"}
+      
+          bg={"black"}
+      >
+          <Vid
               maxWidth  ={"none"}
             ref={videoRef}
-            height="100%"
             loop
             muted
             style={{...rest}}>
                <source src={"/video/home.mp4"} type="video/mp4"></source>
-      </video>
+      </Vid>
 </Center>     
       )
 }
