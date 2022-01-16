@@ -55,14 +55,13 @@ export default function Navbar({ router }) {
               <AiFillInstagram />
             </Link>
           </HStack>
-          <Box width={"10%"}>
+          <Box width={"5%"} position={"absolute"} top={3}>
             <Image
               src={"/blogo.png"}
-              width={"10%"}
-              height={"10%"}
+              width={"5%"}
+              height={"5%"}
               layout="responsive"
                 zIndex={0}
-
             />
             </Box>
           <HStack direction="row-reverse" mr={10} paddingBottom={"10px"}>
