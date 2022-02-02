@@ -16,7 +16,7 @@ import {HomeVideo} from "../components/videos";
 
 const Card = ({ title, desc, img, href }) => {
   return (
-    <Link href={href}>
+    <Link href={href} passHref>
       <Box
         width="20vw"
         position={"relative"}
@@ -32,6 +32,7 @@ const Card = ({ title, desc, img, href }) => {
           layout="responsive"
           objectFit="contain"
           priority
+          alt={title}
         ></Image>
         <Text>{title}</Text>
         <Text>{desc}</Text>
@@ -52,6 +53,7 @@ export default function Home() {
           width={"100px"}
           height={"100px"}
           priority
+          alt="logo"
         ></Image>
       </Box>
       <Box height={"110%"} display={"block"}>
@@ -89,9 +91,9 @@ export default function Home() {
               height="315"
               src="https://www.youtube.com/embed/HcT_iOc8Ym0?controls=0"
               title="YouTube video player"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           </Center>
         </VStack>
