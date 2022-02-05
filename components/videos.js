@@ -4,9 +4,9 @@ import styled from "@emotion/styled";
 
 const Vid = styled.video`
   width: auto;
-  height: 100%;
+  height: 90%;
   @media (min-width: 1900px) {
-    height: 100%;
+    height: 90%;
     width: 100%;
   }
 `;
@@ -38,7 +38,7 @@ export const LocationVideo = ({ ...rest }) => {
   }, []);
   return (
     <Center zIndex={-1} overflow={"hidden"} bg={"black"}>
-      <Vid maxWidth={"none"} ref={videoRef} loop muted style={{ ...rest }}>
+      <Vid maxWidth={"none"} ref={videoRef} loop muted style={{...rest }}>
         <source src={"/video/location.mp4"} type="video/mp4"></source>
       </Vid>
     </Center>

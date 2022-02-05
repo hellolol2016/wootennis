@@ -12,7 +12,7 @@ import Title from "../components/title";
 const NavLink = ({ text, href, path }) => {
   const cur = href === path;
   return (
-    <Link target="" href={href}>
+    <Link passHref target="" href={href}>
       <Box
         padding={3}
         color={"gray.100"}
@@ -26,11 +26,10 @@ const NavLink = ({ text, href, path }) => {
   );
 };
 
-export default function Navbar({ router }) {
-  console.log(router);
+export default function Navbar({ router ,...rest}) {
   if (router.route !== "/") {
     return (
-      <Box background>
+      <Box background {...rest}>
         <motion.div
           animate={{ opacity: 1, y: 0, transition: { duration: 0.6 } }}
           initial={{ opacity: 0, y: 30 }}
@@ -42,26 +41,27 @@ export default function Navbar({ router }) {
             className="nav-soc"
             padding={"10px"}
           >
-            <Link href="https://www.yelp.com/biz/woo-tennis-lessons-irvine">
+            <Link passHref href="https://www.yelp.com/biz/woo-tennis-lessons-irvine">
               <FaYelp />
             </Link>
-            <Link href="https://www.facebook.com/dwootennis">
+            <Link passHref href="https://www.facebook.com/dwootennis">
               <AiFillFacebook />
             </Link>
-            <Link href="https://www.linkedin.com/in/davidwoo/">
+            <Link passHref href="https://www.linkedin.com/in/davidwoo/">
               <AiFillLinkedin />
             </Link>
-            <Link href="https://www.instagram.com/wootennis/?hl=en">
+            <Link passHref href="https://www.instagram.com/wootennis/?hl=en">
               <AiFillInstagram />
             </Link>
           </HStack>
-          <Box width={"5%"} position={"absolute"} top={3}>
+          <Box width={"5%"} position={"absolute"} top={3} left={6}>
             <Image
               src={"/blogo.png"}
               width={"5%"}
               height={"5%"}
               layout="responsive"
                 zIndex={0}
+                alt="Logo"
             />
             </Box>
           <HStack direction="row-reverse" mr={10} paddingBottom={"10px"}>

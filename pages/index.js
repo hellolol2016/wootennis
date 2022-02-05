@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Article from "../components/article";
 import Title from "../components/title";
-import { Box, Center, HStack, Spacer, Text, VStack } from "@chakra-ui/react";
+import { Box, Button, Center, HStack, Spacer, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 import pfp from "../public/woo.png";
 import Img from "../components/image";
@@ -41,12 +41,24 @@ const Card = ({ title, desc, img, href }) => {
   );
 };
 
-export default function Home() {
+const NavButton = ({name, href,...rest})=>{
+  return (<Link passHref href={href} flex={2} ><Button {...rest}>
+    {name}
+  </Button></Link>)
+}
+
+export default function Home({router}) {
   return (
     <>
       <Head></Head>
 
-      <HomeVideo />
+      <HomeVideo/>
+      <HStack position={"sticky"} zIndex={2} mr="20px" bottom={"10px"}>
+        <Spacer  width={"70vw"}/>
+        <NavButton name="Home" href="/"/> 
+        <NavButton name="About" href="/about"/> 
+        <NavButton name="Location" href="/location"/> 
+        </HStack> 
       <Box position={"absolute"} top={10} left={"3%"}>
         <Image
           src={"/blogo.png"}
