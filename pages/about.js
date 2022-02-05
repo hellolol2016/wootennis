@@ -99,7 +99,7 @@ export default function Page({}) {
             </Box>
 
             <Box flex={1}>
-              <Image src={"/center.jpg"} width={"100%"} height={"80%"} layout="responsive"/>
+              <Image alt="center image" src={"/center.jpg"} width={"100%"} height={"80%"} layout="responsive"/>
             </Box>
           </HStack>
 
@@ -108,18 +108,18 @@ export default function Page({}) {
           <VStack maxW="70%" bg={"rgba(0,0,0,0.5)"}>
             <Title mt={10}>Mission</Title>
             <Article>
-              THis is the person that the website is for , he's a pretty chill
-              guy THis is the person that the website is for , he's a pretty
-              chill guyTHis is the person that the website is for , he's a
-              pretty chill guyTHis is the person that the website is for , he's
+              THis is the person that the website is for , he&apos;s a pretty chill
+              guy THis is the person that the website is for , he&apos;s a pretty
+              chill guyTHis is the person that the website is for , he&apos;s a
+              pretty chill guyTHis is the person that the website is for , he&apos;s
               a pretty chill guyTHis is the person that the website is for ,
-              he's a pretty chill guyTHis is the person that the website is for
-              , he's a pretty chill guyTHis is the person that the website is
-              for , he's a pretty chill guyTHis is the person that the website
-              is for , he's a pretty chill guyTHis is the person that the
-              website is for , he's a pretty chill guyTHis is the person that
-              the website is for , he's a pretty chill guyTHis is the person
-              that the website is for , he's a pretty chill guy
+              he&apos;s a pretty chill guyTHis is the person that the website is for
+              , he&apos;s a pretty chill guyTHis is the person that the website is
+              for , he&apos;s a pretty chill guyTHis is the person that the website
+              is for , he&apos;s a pretty chill guyTHis is the person that the
+              website is for , he&apos;s a pretty chill guyTHis is the person that
+              the website is for , he&apos;s a pretty chill guyTHis is the person
+              that the website is for , he&apos;s a pretty chill guy
             </Article>
           </VStack>
       </VStack>
