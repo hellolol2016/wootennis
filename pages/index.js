@@ -50,9 +50,14 @@ const NavButton = ({name, href,...rest})=>{
 export default function Home({router}) {
   return (
     <>
-      <Head></Head>
+      <Head>
+            <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta httpEquiv="X-UA-Compatible" content="ie=edge"/>
+    <title>WooTennis</title>
+      </Head>
 
-      <HomeVideo/>
+      <HomeVideo />
       <HStack position={"sticky"} zIndex={2} mr="20px" bottom={"10px"}>
         <Spacer  width={"70vw"}/>
         <NavButton name="Home" href="/"/> 
@@ -97,10 +102,10 @@ export default function Home({router}) {
               <Card title="Team" desc="Our team" img="swag" href="/team"></Card>
             </HStack>
           </Center>
-          <Center>
+          <Center width={{base:"100vw", md:"50%"}} height="40vh">
             <iframe
-              width="560"
-              height="315"
+              width="100%"
+              height={"100%"}
               src="https://www.youtube.com/embed/HcT_iOc8Ym0?controls=0"
               title="YouTube video player"
               frameBorder="0"

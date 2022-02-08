@@ -3,11 +3,11 @@ import React, { useEffect, useRef } from "react";
 import styled from "@emotion/styled";
 
 const Vid = styled.video`
-  width: auto;
-  height: 90%;
+  height: 100%;
+  width:auto;
   @media (min-width: 1900px) {
-    height: 90%;
-    width: 100%;
+    height: 100%;
+    width:auto;
   }
 `;
 
