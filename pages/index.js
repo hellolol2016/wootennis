@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Article from "../components/article";
 import Title from "../components/title";
-import { Box, Button, Center, HStack, Spacer, Text, VStack } from "@chakra-ui/react";
+import { Box, Button, Center, HStack, Spacer, Stack, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 import pfp from "../public/woo.png";
 import Img from "../components/image";
@@ -16,9 +16,9 @@ import {HomeVideo} from "../components/videos";
 
 const Card = ({ title, desc, img, href }) => {
   return (
-    <Link href={href} passHref>
+    <Link href={href} passHref >
       <Box
-        width="20vw"
+        width={{base:"80vw", xl:"20vw"}}
         position={"relative"}
         boxShadow={"-1px 4px 17px -7px #000000"}
         padding={5}
@@ -57,13 +57,13 @@ export default function Home({router}) {
     <title>WooTennis</title>
       </Head>
 
-      <HomeVideo />
-      <HStack position={"sticky"} zIndex={2} mr="20px" bottom={"10px"}>
+      <HStack position={"sticky"} zIndex={10} mr="20px" top={"95%"} height="0">
         <Spacer  width={"70vw"}/>
         <NavButton name="Home" href="/"/> 
         <NavButton name="About" href="/about"/> 
         <NavButton name="Location" href="/location"/> 
         </HStack> 
+      <HomeVideo />
       <Box position={"absolute"} top={10} left={"3%"}>
         <Image
           src={"/blogo.png"}
@@ -86,7 +86,7 @@ export default function Home({router}) {
       <ACenter w={{ base: "90%", xl: "70%" }}>
         <VStack width="100%">
           <Center width={"100%"} bg={"gray.400"} p={"10"}>
-            <HStack spacing={"20px"}>
+            <Stack spacing={"20px"} flexDir={{base:"column",xl:"row"}}>
               <Card
                 title="About"
                 desc="More about me"
@@ -100,18 +100,7 @@ export default function Home({router}) {
                 href="/location"
               ></Card>
               <Card title="Team" desc="Our team" img="swag" href="/team"></Card>
-            </HStack>
-          </Center>
-          <Center width={{base:"100vw", md:"50%"}} height="40vh">
-            <iframe
-              width="100%"
-              height={"100%"}
-              src="https://www.youtube.com/embed/HcT_iOc8Ym0?controls=0"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+            </Stack>
           </Center>
         </VStack>
       </ACenter>
