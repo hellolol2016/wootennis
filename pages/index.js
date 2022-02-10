@@ -4,7 +4,17 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Article from "../components/article";
 import Title from "../components/title";
-import { Box, Button, Center, HStack, Spacer, Stack, Text, VStack } from "@chakra-ui/react";
+import {
+  background,
+  Box,
+  Button,
+  Center,
+  HStack,
+  Spacer,
+  Stack,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import React from "react";
 import pfp from "../public/woo.png";
 import Img from "../components/image";
@@ -12,57 +22,62 @@ import courts from "../public/center.jpg";
 import ACenter from "../components/Acenter";
 import Link from "next/link";
 import Navbar from "../components/navbar";
-import {HomeVideo} from "../components/videos";
+import { HomeVideo } from "../components/videos";
 
-const Card = ({ title, desc, img, href }) => {
+const Card = ({ title, desc, img, href,...rest }) => {
   return (
-    <Link href={href} passHref >
-      <Box
-        width={{base:"80vw", xl:"20vw"}}
-        position={"relative"}
-        boxShadow={"-1px 4px 17px -7px #000000"}
-        padding={5}
-        borderRadius={5}
-        bg={"gray.100"}
-      >
-        <Image
-          src={`/${img}.png`}
-          width={"100%"}
-          height={"100%"}
-          layout="responsive"
-          objectFit="contain"
-          priority
-          alt={title}
-        ></Image>
-        <Text>{title}</Text>
-        <Text>{desc}</Text>
-      </Box>
+    <Button height={"auto"}
+          boxShadow={"-1px 4px 17px -7px #000000"}
+          style={{margin:"10px"}}
+   >
+      <Link href={href} passHref>
+        <Box
+          width={{ base: "80vw", xl: "15vw" }}
+          position={"relative"}
+          padding={5}
+          borderRadius={5}
+        >
+          <Image
+            src={`/${img}.png`}
+            width={"100%"}
+            height={"100%"}
+            layout="responsive"
+            objectFit="contain"
+            priority
+            alt={title}
+          ></Image>
+          <Text>{title}</Text>
+          <Text>{desc}</Text>
+        </Box>
+      </Link>
+    </Button>
+  );
+};
+
+const NavButton = ({ name, href, ...rest }) => {
+  return (
+    <Link passHref href={href} flex={2}>
+      <Button style={{...rest} }  backgroundColor="gray.200">{name}</Button>
     </Link>
   );
 };
 
-const NavButton = ({name, href,...rest})=>{
-  return (<Link passHref href={href} flex={2} ><Button {...rest}>
-    {name}
-  </Button></Link>)
-}
-
-export default function Home({router}) {
+export default function Home({ router }) {
   return (
     <>
       <Head>
-            <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta httpEquiv="X-UA-Compatible" content="ie=edge"/>
-    <title>WooTennis</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+        <title>WooTennis</title>
       </Head>
 
       <HStack position={"sticky"} zIndex={10} mr="20px" top={"95%"} height="0">
-        <Spacer  width={"70vw"}/>
-        <NavButton name="Home" href="/"/> 
-        <NavButton name="About" href="/about"/> 
-        <NavButton name="Location" href="/location"/> 
-        </HStack> 
+        <Spacer width={"70vw"} />
+        <NavButton name="Home" href="/" />
+        <NavButton name="About" href="/about" />
+        <NavButton name="Location" href="/location" />
+      </HStack>
       <HomeVideo />
       <Box position={"absolute"} top={10} left={"3%"}>
         <Image
@@ -86,7 +101,7 @@ export default function Home({router}) {
       <ACenter w={{ base: "90%", xl: "70%" }}>
         <VStack width="100%">
           <Center width={"100%"} bg={"gray.400"} p={"10"}>
-            <Stack spacing={"20px"} flexDir={{base:"column",xl:"row"}}>
+            <Stack flexDir={{ base: "column", xl: "row" }}>
               <Card
                 title="About"
                 desc="More about me"
